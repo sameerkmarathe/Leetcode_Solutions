@@ -23,7 +23,7 @@ for i , num in enumerate(nums):
 '''
 The second more elegant approach uses hashmap. The hashmap is dynamically built as we go to allow for duplicates.
 Time Compleixity: O(n) as we only do one pass over the list
-Space Complexity: O(n)
+Space Complexity: O(n) as we keep a hashmap for reference
 '''
 ind_dict = {}
         for i,num in enumerate(nums):
