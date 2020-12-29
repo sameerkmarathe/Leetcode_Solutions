@@ -4,7 +4,7 @@
 
 
 '''
-There are three approaches to this problem. We will go through them one by one.
+There are two approaches to this problem. We will go through them one by one.
 '''
 
 '''
@@ -19,4 +19,16 @@ for i , num in enumerate(nums):
                 if num + another == target and i != j:
                     return [i,j]
 '''
+
+'''
+The second more elegant approach uses hashmap. The hashmap is dynamically built as we go to allow for duplicates.
+Time Compleixity: O(n) as we only do one pass over the list
+Space Complexity: O(n)
+'''
+ind_dict = {}
+        for i,num in enumerate(nums):
+            if target-num in ind_dict:
+                return [i, ind_dict[target-num]]
+            else:
+                ind_dict[num] = i
 
