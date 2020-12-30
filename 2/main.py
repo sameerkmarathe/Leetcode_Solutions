@@ -12,7 +12,7 @@ There are two main approaches for this problem:
 We can solve this problem using simple rules for arithmetic addition
 Create a new linked list to hold the sum of two numbers
 
-Time Complexity: \Theta(max(length of linked lists)) as we iterate the maximum length among the linked lists exactly once.
+Time Complexity: \Theta(max(lengths of linked lists)) as we iterate the maximum length among the linked lists exactly once.
 
 Space Complexity: \Theta(max(length of linked list)) as the length of the answer will be at most one node more than the maximum of two linked lists' length. Note that we can mutate one of the linked list to store the answer but this will require us to find out the bigger linked list beforehand. Doing this optimization will offer smaller space complexity. 
 '''
@@ -44,7 +44,7 @@ return ans.next
 
 '''
 The second approach is recursion. This approach boasts almost same time complexity as the previous approach but uses constant memory due to its recursive nature.
-Time Complexity: O(min(length of linked list)) as we stop recusing when we reach the end of the smaller list
+Time Complexity: O(min(lengths of linked lists)) as we stop recusing when we reach the end of the smaller list
 Space Complexity: O(1) we do not maintain any data structure for the recusive approach.
 '''
 
