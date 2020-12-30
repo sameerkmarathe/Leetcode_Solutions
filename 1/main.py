@@ -26,9 +26,9 @@ Time Compleixity: O(n) as we only do one pass over the list
 Space Complexity: O(n) as we keep a hashmap for reference
 '''
 ind_dict = {}
-        for i,num in enumerate(nums):
-            if target-num in ind_dict:
-                return [i, ind_dict[target-num]]
-            else:
-                ind_dict[num] = i
+for i,num in enumerate(nums):
+  if target-num in ind_dict:
+    return [i, ind_dict[target-num]]
+  else:
+    ind_dict[num] = i
 
