@@ -7,8 +7,8 @@
 To do this problem as quickly as possible, it is necessary to combine two sorted arrays virtually and work on it. The intuition behind this is explained very well in this blog, referenced for the solution below:
 https://medium.com/@hazemu/finding-the-median-of-2-sorted-arrays-in-logarithmic-time-1d3f2ecbeb46
 Also refer to @StefanPochmann for a beautiful solution with same idea.
-Time Complexity: O(log(min(lengths of lists))) because we in effect do a modified binary search
-Space Complexity: O(1) as we do not use any additional data structure
+Time complexity: O(log(lengths of lists)) as we effectively perform a binary search
+Space Complexity: O(1) as we use no additional data structure
 '''
 
 nums1, nums2 = sorted((nums1,nums2), key = len)
@@ -20,14 +20,14 @@ while mini <= maxi:
             
   i = (mini + maxi) // 2
   j = half_len - i
-            
-  if i < m and nums2[j-1] > nums1[i]:
-  ## Go to right in the first array
-    mini = i + 1
-        
-  elif i > 0 and nums1[i-1] > nums2[j]:
+                  
+  if i > 0 and nums1[i-1] > nums2[j]:
   # Too many elements taken from first array
     maxi = i - 1
+  
+  elif i < m and nums2[j-1] > nums1[i]:
+  ## Go to right in the first array
+    mini = i + 1
             
   else:
   # This looks the right i
