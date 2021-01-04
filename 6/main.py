@@ -14,12 +14,15 @@ if numRows == 1 or numRows > len(s) -1:
 ##Buckets to keep characters in
 ans = [""] * numRows
 
+## Initialise the iterating varaibles
 index, step = 0, 1
 
-##reverse the step when you hit edge buckets
+##Reverse the step when you hit edge buckets
 stepdict={0:1,numRows-1:-1}
 
+##Iterate the characters
 for char in s:
+
     ans[index] += char
 
     step = stepdict.get(index,step)
