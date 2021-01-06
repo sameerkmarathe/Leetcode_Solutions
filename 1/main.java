@@ -5,7 +5,7 @@
 */
 
 /*
-Please refer to the python file for more information on the approach
+Please refer the python file for more information on the approach
 */
 
 Map<Integer,Integer> indDict = new HashMap<>();
