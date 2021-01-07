@@ -4,7 +4,8 @@
 
 
 '''
-This is somewhat mundane problem compared to the previous ones. Regardless is, we can create a solution using in-built str function with some modification. It is much easier to perform the conversion ourselves
+This is somewhat mundane problem compared to the previous ones. Regardless is, we can create a solution using in-built str function with some modification.
+It is much easier to perform the conversion ourselves.
 Time Complexity: O(n) As we iterate the string of length n
 Space Complexity: O(1) as we store the resulting integer in variable
 '''
