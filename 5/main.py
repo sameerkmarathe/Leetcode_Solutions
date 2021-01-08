@@ -4,7 +4,8 @@
 
 
 '''
-This is in a way extension to two pointer approach discussed in problem 4. The approach is simple. Just start at an index in string and extend outward till the substring ceases to be palindrome.
+This is in a way extension to two pointer approach discussed in problem 4. The approach is simple.
+Just start at an index in string and extend outward till the substring ceases to be palindrome.
 Time Complexity: O(n^2) because we can in worst case sweep entire string per index
 Space Complexity: O(1) because we use constant amount of space to maintain the longest palindrome substring.
 '''

@@ -4,7 +4,8 @@
 
 
 '''
-To do this problem as quickly as possible, it is necessary to combine two sorted arrays virtually and work on it. The intuition behind this is explained very well in this blog, referenced for the solution below:
+To do this problem as quickly as possible, it is necessary to combine two sorted arrays virtually and work on it.
+The intuition behind this is explained very well in this blog, referenced for the solution below:
 https://medium.com/@hazemu/finding-the-median-of-2-sorted-arrays-in-logarithmic-time-1d3f2ecbeb46
 Also refer to @StefanPochmann for a beautiful solution with same idea.
 Time complexity: O(log(lengths of lists)) as we effectively perform a binary search

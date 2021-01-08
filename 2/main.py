@@ -14,7 +14,9 @@ Create a new linked list to hold the sum of two numbers
 
 Time Complexity: \Theta(max(lengths of linked lists)) as we iterate the maximum length among the linked lists exactly once.
 
-Space Complexity: \Theta(max(length of linked list)) as the length of the answer will be at most one node more than the maximum of two linked lists' length. Note that we can mutate one of the linked list to store the answer but this will require us to find out the bigger linked list beforehand. Doing this optimization will offer smaller space complexity. 
+Space Complexity: \Theta(max(length of linked list)) as the length of the answer will be at most one node more than the maximum of two linked lists' length.
+Note that we can mutate one of the linked list to store the answer but this will require us to find out the bigger linked list beforehand.
+Doing this optimization will offer smaller space complexity. 
 '''
 
 class ListNode:
