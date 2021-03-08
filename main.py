@@ -1,24 +1,30 @@
-#############################################################
-#############	19.Remove Nth node from end of List	#####
-#############################################################
+###########################################################
+##########	29. Divide Two Integers	###################
+###########################################################
 
 
 '''
-Trick is to get the length of the list. But this is two iteration and slow.
-A workaoround will be to get a slow and fast pointer, move the fast pointer ahead and let them meet. That point will be the node to be removed
-Time Complexity:O(N) where N is the length of the list
-Space Complexity: O(1) 
+Just use the subtract formula and do the division till divident goes below divisor
+Time Complexity:O(log(n)) n being the numerator length
+Space Complexity:O(1) we only use constant space
 '''
 
 class Solution:
-    def removeNthFromEnd(self, head: ListNode, n: int) -> ListNode:
-        fast = slow = head
-        for _ in range(n):
-            fast = fast.next
-        if not fast:
-            return head.next
-        while fast.next:
-            fast = fast.next
-            slow = slow.next
-        slow.next = slow.next.next
-        return head
+    def divide(self, dividend, divisor):     
+        neg=( (dividend < 0) != (divisor < 0) )
+        dividend = left = abs(dividend)
+        divisor  = div  = abs(divisor)
+        Q = 1
+        ans = 0
+        while left >= divisor:
+            left -= div
+            ans  += Q 
+            Q    += Q
+            div  += div
+            if left < div:
+                div = divisor
+                Q = 1
+        if neg:
+            return max(-ans, -2147483648)
+        else:
+            return min(ans, 2147483647)
